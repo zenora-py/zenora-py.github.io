@@ -1,0 +1,501 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Reference &mdash; Zenora 0.0.11 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Changelog" href="changelog.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Zenora
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.11
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-zenora.impl.rest">REST API Instance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-zenora.impl.factory">Model Factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-zenora.channels">Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-zenora.errors">Errors</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Zenora</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api-reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-zenora.impl.rest">
+<span id="rest-api-instance"></span><h2>REST API Instance<a class="headerlink" href="#module-zenora.impl.rest" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="zenora.impl.rest.RESTAPI">
+<em class="property">class </em><code class="sig-prename descclassname">zenora.impl.rest.</code><code class="sig-name descname">RESTAPI</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">token_type</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zenora/impl/rest.html#RESTAPI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.impl.rest.RESTAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">zenora.base.rest.RESTAPI</span></code></p>
+<dl class="py method">
+<dt id="zenora.impl.rest.RESTAPI.get_dm_channel">
+<code class="sig-name descname">get_dm_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">snowflake</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="#zenora.channels.DMTextChannel" title="zenora.channels.DMTextChannel">zenora.channels.DMTextChannel</a><span class="p">]</span><a class="reference internal" href="_modules/zenora/impl/rest.html#RESTAPI.get_dm_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.impl.rest.RESTAPI.get_dm_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch guild DM channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>snowflake</strong> (<em>int</em>) – The channel ID of the specific channel you want to fetch</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Zenora DM text channel object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#zenora.channels.DMTextChannel" title="zenora.channels.DMTextChannel">zenora.channels.DMTextChannel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.impl.rest.RESTAPI.get_text_channel">
+<code class="sig-name descname">get_text_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">snowflake</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="#zenora.channels.GuildTextChannel" title="zenora.channels.GuildTextChannel">zenora.channels.GuildTextChannel</a><span class="p">]</span><a class="reference internal" href="_modules/zenora/impl/rest.html#RESTAPI.get_text_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.impl.rest.RESTAPI.get_text_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch guild text channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>snowflake</strong> (<em>int</em>) – The channel ID of the specific channel you want to fetch</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Zenora guild text channel object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#zenora.channels.GuildTextChannel" title="zenora.channels.GuildTextChannel">zenora.channels.GuildTextChannel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.impl.rest.RESTAPI.get_voice_channel">
+<code class="sig-name descname">get_voice_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">snowflake</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="#zenora.channels.GuildTextChannel" title="zenora.channels.GuildTextChannel">zenora.channels.GuildTextChannel</a><span class="p">]</span><a class="reference internal" href="_modules/zenora/impl/rest.html#RESTAPI.get_voice_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.impl.rest.RESTAPI.get_voice_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch guild voice channel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>snowflake</strong> (<em>int</em>) – [description]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Zenora guild voice channel object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#zenora.channels.GuildVoiceChannel" title="zenora.channels.GuildVoiceChannel">zenora.channels.GuildVoiceChannel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="module-zenora.impl.factory">
+<span id="model-factory"></span><h2>Model Factory<a class="headerlink" href="#module-zenora.impl.factory" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="zenora.impl.factory.Factory">
+<em class="property">class </em><code class="sig-prename descclassname">zenora.impl.factory.</code><code class="sig-name descname">Factory</code><a class="reference internal" href="_modules/zenora/impl/factory.html#Factory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.impl.factory.Factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">zenora.base.factory.Factory</span></code></p>
+<dl class="py method">
+<dt id="zenora.impl.factory.Factory.parse_channel">
+<code class="sig-name descname">parse_channel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/zenora/impl/factory.html#Factory.parse_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.impl.factory.Factory.parse_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses response data from Dicord API into channel objects</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response</strong> (<em>typing.Dict</em>) – Discord API response as dictionary/JSON</p></li>
+<li><p><strong>snowflake</strong> (<em>int</em>) – Snowflake ID of the channel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Zenora guild text channel object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#zenora.channels.GuildTextChannel" title="zenora.channels.GuildTextChannel">zenora.channels.GuildTextChannel</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="module-zenora.channels">
+<span id="channels"></span><h2>Channels<a class="headerlink" href="#module-zenora.channels" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="zenora.channels.DMTextChannel">
+<em class="property">class </em><code class="sig-prename descclassname">zenora.channels.</code><code class="sig-name descname">DMTextChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zenora/channels.html#DMTextChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.channels.DMTextChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A DM/Private message text channel object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Zenora DM text channel object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>zenora.channel.DMTextChannel</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="zenora.channels.DMTextChannel.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#zenora.channels.DMTextChannel.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns The snowflake ID of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.DMTextChannel.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#zenora.channels.DMTextChannel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.DMTextChannel.position">
+<em class="property">property </em><code class="sig-name descname">position</code><a class="headerlink" href="#zenora.channels.DMTextChannel.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the channel.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="zenora.channels.GuildTextChannel">
+<em class="property">class </em><code class="sig-prename descclassname">zenora.channels.</code><code class="sig-name descname">GuildTextChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zenora/channels.html#GuildTextChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.channels.GuildTextChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A server text channel object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Zenora Guild Text Channel object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#zenora.channels.GuildTextChannel" title="zenora.channels.GuildTextChannel">zenora.channels.GuildTextChannel</a></p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.category_id">
+<em class="property">property </em><code class="sig-name descname">category_id</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.category_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the snowflake ID of the parant category of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.guild_id">
+<em class="property">property </em><code class="sig-name descname">guild_id</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.guild_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the snowflake ID of the channel’s guild.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns The snowflake ID of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.is_nsfw">
+<em class="property">property </em><code class="sig-name descname">is_nsfw</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.is_nsfw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the channel is NSFW or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.last_message_id">
+<em class="property">property </em><code class="sig-name descname">last_message_id</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.last_message_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the snowflake ID of the last message of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.permission_overwrites">
+<em class="property">property </em><code class="sig-name descname">permission_overwrites</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.permission_overwrites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the permission overwrites of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.position">
+<em class="property">property </em><code class="sig-name descname">position</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.rate_limit_per_user">
+<em class="property">property </em><code class="sig-name descname">rate_limit_per_user</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.rate_limit_per_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rate limit per user of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildTextChannel.topic">
+<em class="property">property </em><code class="sig-name descname">topic</code><a class="headerlink" href="#zenora.channels.GuildTextChannel.topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the topic of the channel.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="zenora.channels.GuildVoiceChannel">
+<em class="property">class </em><code class="sig-prename descclassname">zenora.channels.</code><code class="sig-name descname">GuildVoiceChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/zenora/channels.html#GuildVoiceChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.channels.GuildVoiceChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A guild voice channel object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Zenora guild voice channel object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>zenora.channel.GuildVoiceChannel</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.bitrate">
+<em class="property">property </em><code class="sig-name descname">bitrate</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.bitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the bitrate of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.category_id">
+<em class="property">property </em><code class="sig-name descname">category_id</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.category_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the snowflake ID of the parant category of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.guild_id">
+<em class="property">property </em><code class="sig-name descname">guild_id</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.guild_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the snowflake ID of the channel’s guild.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns The snowflake ID of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.is_nsfw">
+<em class="property">property </em><code class="sig-name descname">is_nsfw</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.is_nsfw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns if the channel is NSFW or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.permission_overwrites">
+<em class="property">property </em><code class="sig-name descname">permission_overwrites</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.permission_overwrites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the permission overwrites of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.position">
+<em class="property">property </em><code class="sig-name descname">position</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position of the channel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="zenora.channels.GuildVoiceChannel.user_limit">
+<em class="property">property </em><code class="sig-name descname">user_limit</code><a class="headerlink" href="#zenora.channels.GuildVoiceChannel.user_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the user limit of the channel.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<hr class="docutils" />
+<div class="section" id="module-zenora.errors">
+<span id="errors"></span><h2>Errors<a class="headerlink" href="#module-zenora.errors" title="Permalink to this headline">¶</a></h2>
+<dl class="py exception">
+<dt id="zenora.errors.MissingAccess">
+<em class="property">exception </em><code class="sig-prename descclassname">zenora.errors.</code><code class="sig-name descname">MissingAccess</code><a class="reference internal" href="_modules/zenora/errors.html#MissingAccess"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#zenora.errors.MissingAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raised when user/bot does not have access to specified channel.</p>
+<dl class="field-list simple">
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="changelog.html" class="btn btn-neutral float-left" title="Changelog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, K.M Ahnaf Zamil
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
