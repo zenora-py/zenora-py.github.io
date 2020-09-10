@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Getting Started &mdash; Zenora 0.0.11 documentation</title>
+    <title>Getting Started &mdash; Zenora 0.0.20 documentation</title>
 
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -29,7 +29,7 @@
 
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="next" title="API Reference" href="api-reference.html" />
     <link rel="prev" title="Zenora" href="index.html" />
   </head>
 
@@ -46,7 +46,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.11</div>
+            <div class="version">0.0.20</div>
 
             <div role="search">
               <form
@@ -82,13 +82,13 @@
                 </ul>
               </li>
               <li class="toctree-l1">
-                <a class="reference internal" href="changelog.html"
-                  >Changelog</a
+                <a class="reference internal" href="api-reference.html"
+                  >API Reference</a
                 >
               </li>
               <li class="toctree-l1">
-                <a class="reference internal" href="api-reference.html"
-                  >API Reference</a
+                <a class="reference internal" href="changelog.html"
+                  >Changelog</a
                 >
               </li>
             </ul>
@@ -176,9 +176,9 @@
 <span class="c1"># Instantiate a REST API instance</span>
 <span class="n">api</span> <span class="o">=</span> <span class="n">zenora</span><span class="o">.</span><span class="n">RESTAPI</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="s2">&quot;your_token_here&quot;</span><span class="p">,</span> <span class="n">token_type</span><span class="o">=</span><span class="s2">&quot;your_token_type_here&quot;</span><span class="p">)</span>
 
-<span class="c1"># Query API for getting text channel</span>
+<span class="c1"># Query API for getting channel</span>
 <span class="c1"># Zenora parses API response into Python objects for accessing data</span>
-<span class="n">channel</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_text_channel</span><span class="p">(</span><span class="mi">732595879747256371</span><span class="p">)</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="mi">732595879747256371</span><span class="p">)</span>
 
 <span class="c1"># Use the data</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -212,9 +212,9 @@
                 aria-label="footer navigation"
               >
                 <a
-                  href="changelog.html"
+                  href="api-reference.html"
                   class="btn btn-neutral float-right"
-                  title="Changelog"
+                  title="API Reference"
                   accesskey="n"
                   rel="next"
                   >Next <span class="fa fa-arrow-circle-right"></span
@@ -235,12 +235,6 @@
               <div role="contentinfo">
                 <p>&copy; Copyright 2020, K.M Ahnaf Zamil</p>
               </div>
-
-              Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-
-              <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-
-              provided by <a href="https://readthedocs.org">Read the Docs</a>.
             </footer>
           </div>
         </div>

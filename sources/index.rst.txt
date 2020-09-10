@@ -40,8 +40,8 @@ already exists for your bug or feature.
    :maxdepth: 2
 
    getting-started
-   changelog
    api-reference
+   changelog
 
 * :ref:`genindex`
 

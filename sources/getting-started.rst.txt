@@ -23,9 +23,9 @@ Your first API usage can be written in just a few lines of code:
     # Instantiate a REST API instance
     api = zenora.RESTAPI(token="your_token_here", token_type="your_token_type_here")
 
-    # Query API for getting text channel
+    # Query API for getting channel
     # Zenora parses API response into Python objects for accessing data
-    channel = api.get_text_channel(732595879747256371)
+    channel = api.get_channel(732595879747256371)
 
     # Use the data
     print(channel.name)
