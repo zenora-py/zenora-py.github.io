@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>zenora.channels &mdash; Zenora 0.0.20 documentation</title>
+    <title>zenora.channels &mdash; Zenora 0.0.29 documentation</title>
 
     <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -44,7 +44,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.20</div>
+            <div class="version">0.0.29</div>
 
             <div role="search">
               <form
@@ -120,8 +120,32 @@
                 <h1>Source code for zenora.channels</h1>
                 <div class="highlight">
                   <pre>
-<span></span><span class="kn">import</span> <span class="nn">typing</span>
+<span></span><span class="c1"># Zenora, a modern Python API wrapper for the Discord REST API</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2020 K.M Ahnaf Zamil</span>
+<span class="c1">#</span>
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="c1"># of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="c1"># in the Software without restriction, including without limitation the rights</span>
+<span class="c1"># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="c1"># copies of the Software, and to permit persons to whom the Software is</span>
+<span class="c1"># furnished to do so, subject to the following conditions:</span>
+<span class="c1">#</span>
+<span class="c1"># The above copyright notice and this permission notice shall be included in all</span>
+<span class="c1"># copies or substantial portions of the Software.</span>
+<span class="c1">#</span>
+<span class="c1"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c1"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="c1"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="c1"># SOFTWARE.</span>
+
+
+<span class="kn">import</span> <span class="nn">typing</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">from</span> <span class="nn">zenora.users</span> <span class="kn">import</span> <span class="n">PartialUser</span>
 
 
 <div class="viewcode-block" id="GuildTextChannel"><a class="viewcode-back" href="../../api-reference.html#zenora.channels.GuildTextChannel">[docs]</a><span class="k">class</span> <span class="nc">GuildTextChannel</span><span class="p">:</span>
@@ -226,14 +250,18 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Returns the name of the channel.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">last_message_id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns The last message ID of the channel.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;last_message_id&quot;</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">position</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Returns the position of the channel.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;position&quot;</span><span class="p">]</span>
+    <span class="k">def</span> <span class="nf">recipients</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">List</span><span class="p">[</span><span class="n">PartialUser</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Returns The recipients of the channel.</span>
+
+<span class="sd">        :return: List of Zenora partial user objects</span>
+<span class="sd">        :rtype: typing.List[PartialUser]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">PartialUser</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;recipients&quot;</span><span class="p">]]</span>
 
     <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;String representation of the model.&quot;&quot;&quot;</span>
@@ -333,6 +361,12 @@
               <div role="contentinfo">
                 <p>&copy; Copyright 2020, K.M Ahnaf Zamil</p>
               </div>
+
+              Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+
+              <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
             </footer>
           </div>
         </div>

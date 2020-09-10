@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Changelog &mdash; Zenora 0.0.20 documentation</title>
+    <title>Changelog &mdash; Zenora 0.0.29 documentation</title>
 
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -45,7 +45,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.20</div>
+            <div class="version">0.0.29</div>
 
             <div role="search">
               <form
@@ -81,6 +81,11 @@
               <li class="toctree-l1 current">
                 <a class="current reference internal" href="#">Changelog</a>
                 <ul>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#version-0-0-29-alpha"
+                      >Version 0.0.29-alpha</a
+                    >
+                  </li>
                   <li class="toctree-l2">
                     <a class="reference internal" href="#version-0-0-20-alpha"
                       >Version 0.0.20-alpha</a
@@ -152,6 +157,54 @@
                     If you think anything is missing, make a pull request to add
                     it, or contact me on discord.
                   </p>
+                  <div class="section" id="version-0-0-29-alpha">
+                    <h2>
+                      Version 0.0.29-alpha<a
+                        class="headerlink"
+                        href="#version-0-0-29-alpha"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <ul class="simple">
+                      <li>
+                        <p>
+                          Added
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">PartialUser</span></code
+                          >
+                          object and accessor methods because the API doesn’t
+                          return all fields as shown in documentation.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Converted
+                          <code class="docutils literal notranslate"
+                            ><span class="pre"
+                              >zenora.channels.DMTextChannel.recipients</span
+                            ></code
+                          >
+                          to list of
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">PartialUser</span></code
+                          >
+                          objects instead of dict.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Added error raising for
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">PartialUser</span></code
+                          >
+                          object in case of the usage of invalid snowflake ID as
+                          argument in accessor method.
+                        </p>
+                      </li>
+                      <li><p>Released Zenora v0.0.29-alpha.</p></li>
+                    </ul>
+                  </div>
                   <div class="section" id="version-0-0-20-alpha">
                     <h2>
                       Version 0.0.20-alpha<a
@@ -257,6 +310,12 @@
               <div role="contentinfo">
                 <p>&copy; Copyright 2020, K.M Ahnaf Zamil</p>
               </div>
+
+              Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+
+              <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
             </footer>
           </div>
         </div>

@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>zenora.base.factory &mdash; Zenora 0.0.20 documentation</title>
+    <title>zenora.base.factory &mdash; Zenora 0.0.29 documentation</title>
 
     <link
       rel="stylesheet"
@@ -52,7 +52,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.20</div>
+            <div class="version">0.0.29</div>
 
             <div role="search">
               <form
@@ -159,6 +159,24 @@
 
 <span class="sd">        zenora.channels.DMTextChannel</span>
 <span class="sd">                Zenora DM text channel object</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Factory.parse_user"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.factory.Factory.parse_user">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">parse_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">,</span> <span class="n">snowflake</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Interface of data parser for user object</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        response: typing.Dict</span>
+<span class="sd">                Discord API response as dictionary/JSON</span>
+<span class="sd">        snowflake: int</span>
+<span class="sd">                Snowflake ID of the channel</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        zenora.users.PartialUser</span>
+<span class="sd">                Zenora partial user object</span>
+
 <span class="sd">        &quot;&quot;&quot;</span></div></div>
 </pre>
                 </div>
@@ -170,6 +188,12 @@
               <div role="contentinfo">
                 <p>&copy; Copyright 2020, K.M Ahnaf Zamil</p>
               </div>
+
+              Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+
+              <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
             </footer>
           </div>
         </div>

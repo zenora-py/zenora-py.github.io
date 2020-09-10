@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>zenora.impl.mapper &mdash; Zenora 0.0.20 documentation</title>
+    <title>zenora.impl.mapper &mdash; Zenora 0.0.29 documentation</title>
 
     <link
       rel="stylesheet"
@@ -52,7 +52,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.20</div>
+            <div class="version">0.0.29</div>
 
             <div role="search">
               <form
@@ -131,7 +131,30 @@
                 <h1>Source code for zenora.impl.mapper</h1>
                 <div class="highlight">
                   <pre>
-<span></span><span class="kn">import</span> <span class="nn">typing</span>
+<span></span><span class="c1"># Zenora, a modern Python API wrapper for the Discord REST API</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2020 K.M Ahnaf Zamil</span>
+<span class="c1">#</span>
+<span class="c1"># Permission is hereby granted, free of charge, to any person obtaining a copy</span>
+<span class="c1"># of this software and associated documentation files (the &quot;Software&quot;), to deal</span>
+<span class="c1"># in the Software without restriction, including without limitation the rights</span>
+<span class="c1"># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span>
+<span class="c1"># copies of the Software, and to permit persons to whom the Software is</span>
+<span class="c1"># furnished to do so, subject to the following conditions:</span>
+<span class="c1">#</span>
+<span class="c1"># The above copyright notice and this permission notice shall be included in all</span>
+<span class="c1"># copies or substantial portions of the Software.</span>
+<span class="c1">#</span>
+<span class="c1"># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span>
+<span class="c1"># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span>
+<span class="c1"># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span>
+<span class="c1"># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span>
+<span class="c1"># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span>
+<span class="c1"># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE</span>
+<span class="c1"># SOFTWARE.</span>
+
+
+<span class="kn">import</span> <span class="nn">typing</span>
 <span class="kn">from</span> <span class="nn">zenora.channels</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">zenora.base.mapper</span> <span class="kn">import</span> <span class="n">ChannelMapper</span> <span class="k">as</span> <span class="n">BaseChannelMapper</span>
 <span class="kn">from</span> <span class="nn">zenora.errors</span> <span class="kn">import</span> <span class="n">MissingAccess</span>
@@ -178,6 +201,12 @@
               <div role="contentinfo">
                 <p>&copy; Copyright 2020, K.M Ahnaf Zamil</p>
               </div>
+
+              Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+
+              <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+
+              provided by <a href="https://readthedocs.org">Read the Docs</a>.
             </footer>
           </div>
         </div>
