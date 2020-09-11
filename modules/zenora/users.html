@@ -157,16 +157,7 @@
     <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;code&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10013</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="n">InvalidUser</span><span class="p">(</span><span class="s2">&quot;User with specified snowflake doesn&#39;t exist.&quot;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">pass</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">if</span> <span class="s2">&quot;user_id&quot;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="n">InvalidSnowflake</span><span class="p">(</span><span class="s2">&quot;Invalid snowflake ID.&quot;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-            <span class="k">pass</span>
+        
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
 
     <span class="nd">@property</span>
