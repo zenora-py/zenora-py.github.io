@@ -2,18 +2,15 @@
 API Reference
 =============
 
-REST API Instance
-=================
+
+Class Implementations
+=====================
+
 .. automodule:: zenora.impl.rest
     :members:
     :member-order: groupwise
     :show-inheritance:
 
------
-
-
-Class Implementations
-=====================
 .. automodule:: zenora.impl.factory
     :members:
     :member-order: groupwise

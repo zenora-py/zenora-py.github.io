@@ -4,9 +4,12 @@
    contain the root `toctree` directive.
 
 .. image:: https://img.shields.io/pypi/v/zenora.svg
+.. image:: https://img.shields.io/badge/documentation-up-00FF00.svg
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
 .. image:: https://img.shields.io/github/v/release/ahnaf-zamil/zenora?include_prereleases
-
+.. image:: https://img.shields.io/github/issues-pr/ahnaf-zamil/zenora
+.. image:: https://img.shields.io/pypi/pyversions/zenora
+.. image:: https://img.shields.io/github/issues-raw/ahnaf-zamil/zenora
 
 Zenora
 ==================================
@@ -25,7 +28,7 @@ PyPi: `View on PyPi <https://pypi.org/project/zenora/>`_
 If you need any help with this library at any point feel free to DM me on Discord (Ahnaf#4346).
 
 If you think you have found a bug or other problem with the library, or you would like to suggest a feature,
-you should submit an issue on the GitLab repository `here <https://github.com/ahnaf-zamil/zenora/issues>`_.
+you should submit an issue on the GitHub repository `here <https://github.com/ahnaf-zamil/zenora/issues>`_.
 Before doing so you should make sure you are on the latest version of the library and check to see if an issue
 already exists for your bug or feature.
 
