@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Changelog &mdash; Zenora 0.0.29 documentation</title>
+    <title>Changelog &mdash; Zenora 0.0.31 documentation</title>
 
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -45,7 +45,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.29</div>
+            <div class="version">0.0.31</div>
 
             <div role="search">
               <form
@@ -81,6 +81,11 @@
               <li class="toctree-l1 current">
                 <a class="current reference internal" href="#">Changelog</a>
                 <ul>
+                  <li class="toctree-l2">
+                    <a class="reference internal" href="#version-0-0-31-alpha"
+                      >Version 0.0.31-alpha</a
+                    >
+                  </li>
                   <li class="toctree-l2">
                     <a class="reference internal" href="#version-0-0-30-alpha"
                       >Version 0.0.30-alpha</a
@@ -162,6 +167,58 @@
                     If you think anything is missing, make a pull request to add
                     it, or contact me on discord.
                   </p>
+                  <div class="section" id="version-0-0-31-alpha">
+                    <h2>
+                      Version 0.0.31-alpha<a
+                        class="headerlink"
+                        href="#version-0-0-31-alpha"
+                        title="Permalink to this headline"
+                        >¶</a
+                      >
+                    </h2>
+                    <ul class="simple">
+                      <li>
+                        <p>
+                          Added
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">get_current_user()</span></code
+                          >
+                          method to
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">zenora.RESTAPI</span></code
+                          >
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Renamed
+                          <code class="docutils literal notranslate"
+                            ><span class="pre"
+                              >zenora.users.PartialUser</span
+                            ></code
+                          >
+                          to
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">zenora.users.User</span></code
+                          >.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Added optional properties to
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">User</span></code
+                          >
+                          object that will return
+                          <code class="docutils literal notranslate"
+                            ><span class="pre">None</span></code
+                          >
+                          if API doesn’t send response.
+                        </p>
+                      </li>
+                      <li><p>Released Zenora v0.0.31-alpha.</p></li>
+                    </ul>
+                  </div>
                   <div class="section" id="version-0-0-30-alpha">
                     <h2>
                       Version 0.0.30-alpha<a

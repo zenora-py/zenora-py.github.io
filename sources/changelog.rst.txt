@@ -6,6 +6,17 @@ Here you will find the changelogs for most if not every Zenora update since vers
 
 If you think anything is missing, make a pull request to add it, or contact me on discord.
 
+Version 0.0.31-alpha
+====================
+
+- Added ``get_current_user()`` method to ``zenora.RESTAPI``
+
+- Renamed ``zenora.users.PartialUser`` to ``zenora.users.User``.
+
+- Added optional properties to ``User`` object that will return ``None`` if API doesn't send response. 
+
+- Released Zenora v0.0.31-alpha.
+
 Version 0.0.30-alpha
 ====================
 
