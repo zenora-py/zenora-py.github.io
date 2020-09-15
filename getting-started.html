@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Getting Started &mdash; Zenora 0.0.31 documentation</title>
+    <title>Getting Started &mdash; Zenora 0.0.33 documentation</title>
 
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -46,7 +46,7 @@
               Zenora
             </a>
 
-            <div class="version">0.0.31</div>
+            <div class="version">0.0.33</div>
 
             <div role="search">
               <form
@@ -113,7 +113,7 @@
                 <li>Getting Started</li>
 
                 <li class="wy-breadcrumbs-aside">
-                  <a href="sources/getting-started.rst.txt" rel="nofollow">
+                  <a href="_sources/getting-started.rst.txt" rel="nofollow">
                     View page source</a
                   >
                 </li>
@@ -174,32 +174,16 @@
 <span class="kn">import</span> <span class="nn">zenora</span>
 
 <span class="c1"># Instantiate a REST API instance</span>
-<span class="n">api</span> <span class="o">=</span> <span class="n">zenora</span><span class="o">.</span><span class="n">RESTAPI</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="s2">&quot;your_token_here&quot;</span><span class="p">,</span> <span class="n">token_type</span><span class="o">=</span><span class="s2">&quot;your_token_type_here&quot;</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">zenora</span><span class="o">.</span><span class="n">RESTAPI</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="s2">&quot;your_token_here&quot;</span><span class="p">)</span>
 
-<span class="c1"># Query API for getting channel</span>
+<span class="c1"># Query API for getting the current user&#39;s info</span>
 <span class="c1"># Zenora parses API response into Python objects for accessing data</span>
-<span class="n">channel</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_channel</span><span class="p">(</span><span class="mi">732595879747256371</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get_current_user</span><span class="p">()</span>
 
 <span class="c1"># Use the data</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">channel</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre>
                       </div>
-                    </div>
-                    <div class="admonition note">
-                      <p class="admonition-title">Note</p>
-                      <p>
-                        There are two types of tokens,
-                        <code class="docutils literal notranslate"
-                          ><span class="pre">Bot</span></code
-                        >
-                        &amp;
-                        <code class="docutils literal notranslate"
-                          ><span class="pre">Bearer</span></code
-                        >. Bot tokens are used for accessing the API in bot
-                        applications Bearer tokens are used for accessing the
-                        API data on behalf of a user account for purposes such
-                        as Oauth2.
-                      </p>
                     </div>
                   </div>
                 </div>

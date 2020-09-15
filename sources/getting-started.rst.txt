@@ -21,16 +21,12 @@ Your first API usage can be written in just a few lines of code:
     import zenora
 
     # Instantiate a REST API instance
-    api = zenora.RESTAPI(token="your_token_here", token_type="your_token_type_here")
+    api = zenora.RESTAPI(token="your_token_here")
 
-    # Query API for getting channel
+    # Query API for getting the current user's info
     # Zenora parses API response into Python objects for accessing data
-    channel = api.get_channel(732595879747256371)
+    user = api.get_current_user()
 
     # Use the data
-    print(channel.name)
+    print(user.name)
 
-
-.. note::
-    There are two types of tokens, ``Bot`` & ``Bearer``. Bot tokens are used for accessing the API in bot applications
-    Bearer tokens are used for accessing the API data on behalf of a user account for purposes such as Oauth2.

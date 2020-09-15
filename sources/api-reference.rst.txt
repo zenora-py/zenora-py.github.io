@@ -45,6 +45,14 @@ Users
 
 -----
 
+Files
+=====
+.. automodule:: zenora.file
+    :members:
+    :member-order: groupwise
+
+-----
+
 Errors
 ======
 .. automodule:: zenora.errors

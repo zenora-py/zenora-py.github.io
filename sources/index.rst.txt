@@ -36,9 +36,10 @@ already exists for your bug or feature.
 
 - `Ahnaf#4346 (creator) <https://github.com/ahnaf-zamil/>`_
 
+- `Hjacobs#9441 <https://github.com/MaksymKarunos>`_
+
 - `Starryguy#5682 <https://github.com/StarrMan303/>`_
 
-- `Hjacobs#9441 <https://github.com/MaksymKarunos>`_
 
 
 **Index:**
