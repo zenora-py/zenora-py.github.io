@@ -6,10 +6,12 @@
 .. image:: https://img.shields.io/pypi/v/zenora.svg
 .. image:: https://img.shields.io/badge/documentation-up-00FF00.svg
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+.. image:: https://travis-ci.org/ahnaf-zamil/zenora.svg?branch=master
 .. image:: https://img.shields.io/github/v/release/ahnaf-zamil/zenora?include_prereleases
 .. image:: https://img.shields.io/github/issues-pr/ahnaf-zamil/zenora
 .. image:: https://img.shields.io/pypi/pyversions/zenora
 .. image:: https://img.shields.io/github/issues-raw/ahnaf-zamil/zenora
+
 
 Zenora
 ==================================

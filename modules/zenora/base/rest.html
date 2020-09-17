@@ -197,6 +197,44 @@
 <span class="sd">                Zenora DM text channel object</span>
 <span class="sd">        &quot;&quot;&quot;</span></div>
 
+<div class="viewcode-block" id="RESTAPI.modify_channel"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.rest.RESTAPI.modify_channel">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">modify_channel</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">snowflake</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Modify Discord Guild Channel</span>
+
+<span class="sd">        The snowflake parameter has to be the channel snowflake ID</span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+
+<span class="sd">        snowflake: int</span>
+<span class="sd">                The channel ID of the specific channel you want to fetch</span>
+
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        snowflake : int</span>
+<span class="sd">                The snowflake ID of the channel.</span>
+
+<span class="sd">        args: typing.Dict</span>
+<span class="sd">                A dictionary containing the changes to the current channel. Check this</span>
+<span class="sd">                link for all the changes applicable https://discord.com/developers/docs/resources/channel#modify-channel</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="RESTAPI.delete_channel"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.rest.RESTAPI.delete_channel">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">delete_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snowflake</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Any</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Delete Discord Guild Channel</span>
+
+<span class="sd">        The snowflake parameter has to be the channel snowflake ID</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        snowflake : int</span>
+<span class="sd">                The snowflake ID of the channel.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
 <div class="viewcode-block" id="RESTAPI.get_user"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.rest.RESTAPI.get_user">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
     <span class="k">def</span> <span class="nf">get_user</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snowflake</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Optional</span><span class="p">[</span><span class="n">User</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Fetch Dicord User</span>

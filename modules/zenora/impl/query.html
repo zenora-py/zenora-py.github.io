@@ -243,6 +243,41 @@
         <span class="n">error_checker</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">data</span></div>
 
+<div class="viewcode-block" id="Query.modify_channel"><a class="viewcode-back" href="../../../api-reference.html#zenora.impl.query.Query.modify_channel">[docs]</a>    <span class="k">def</span> <span class="nf">modify_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Implementation for the REST API query to modify guild channel.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        channel_id: int</span>
+<span class="sd">                The snowflake ID of the channel.</span>
+<span class="sd">        typing.Dict:</span>
+<span class="sd">                A dictionary object that will be used to parse the data</span>
+<span class="sd">                into objects</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">patch</span><span class="p">(</span>
+            <span class="n">BASE_URL</span> <span class="o">+</span> <span class="n">FETCH_CHANNEL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel_id</span><span class="p">),</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token_type</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="n">params</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span></div>
+
+<div class="viewcode-block" id="Query.delete_channel"><a class="viewcode-back" href="../../../api-reference.html#zenora.impl.query.Query.delete_channel">[docs]</a>    <span class="k">def</span> <span class="nf">delete_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Implementation for the REST API query to delete guild channel.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        channel_id: int</span>
+<span class="sd">                The snowflake ID of the channel.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">delete</span><span class="p">(</span>
+            <span class="n">BASE_URL</span> <span class="o">+</span> <span class="n">FETCH_CHANNEL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">channel_id</span><span class="p">),</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token_type</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">json</span><span class="p">()</span></div>
+
 <div class="viewcode-block" id="Query.leave_guild"><a class="viewcode-back" href="../../../api-reference.html#zenora.impl.query.Query.leave_guild">[docs]</a>    <span class="k">def</span> <span class="nf">leave_guild</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snowflake</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Implementation for the REST API query to leave a guild.</span>
 
@@ -259,10 +294,10 @@
                 <span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0&quot;</span><span class="p">,</span>
             <span class="p">},</span>
         <span class="p">)</span>
-        <span class="k">if</span> <span class="n">data</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
             <span class="k">raise</span> <span class="n">GuildError</span><span class="p">(</span><span class="s2">&quot;Invalid Guild&quot;</span><span class="p">)</span>
 
-        <span class="k">return</span> <span class="n">data</span></div>
+        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">status_code</span></div>
 
 <div class="viewcode-block" id="Query.current_user_dms"><a class="viewcode-back" href="../../../api-reference.html#zenora.impl.query.Query.current_user_dms">[docs]</a>    <span class="k">def</span> <span class="nf">current_user_dms</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Implementation for the REST API query to fetch current user&#39;s DMs list</span>

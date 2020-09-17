@@ -182,8 +182,32 @@
         <span class="sd">&quot;&quot;&quot;Interface for the REST API query to modify current user.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">        typing.Dict: A dictionary object that will be used to parse the data</span>
-<span class="sd">            into objects</span>
+<span class="sd">        typing.Dict:</span>
+<span class="sd">                A dictionary object that will be used to parse the data</span>
+<span class="sd">                into objects</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Query.modify_channel"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.query.Query.modify_channel">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">modify_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">args</span><span class="p">:</span> <span class="n">typing</span><span class="o">.</span><span class="n">Dict</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Interface for the REST API query to modify guild channel.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        channel_id: int</span>
+<span class="sd">                The snowflake ID of the channel.</span>
+<span class="sd">        typing.Dict:</span>
+<span class="sd">                A dictionary object that will be used to parse the data</span>
+<span class="sd">                into objects</span>
+
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+<div class="viewcode-block" id="Query.delete_channel"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.query.Query.delete_channel">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+    <span class="k">def</span> <span class="nf">delete_channel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channel_id</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Interface for the REST API query to delete guild channel.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">        channel_id: int</span>
+<span class="sd">                The snowflake ID of the channel.</span>
+
 <span class="sd">        &quot;&quot;&quot;</span></div>
 
 <div class="viewcode-block" id="Query.leave_guild"><a class="viewcode-back" href="../../../api-reference.html#zenora.base.query.Query.leave_guild">[docs]</a>    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
