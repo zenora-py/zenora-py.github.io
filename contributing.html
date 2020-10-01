@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Search &mdash; Zenora 0.0.34 documentation</title>
+    <title>Contributing &mdash; Zenora 0.0.34 documentation</title>
 
     <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="static/pygments.css" type="text/css" />
@@ -27,9 +27,9 @@
 
     <script type="text/javascript" src="static/js/theme.js"></script>
 
-    <script type="text/javascript" src="static/searchtools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Changelog" href="changelog.html" />
   </head>
 
   <body class="wy-body-for-nav">
@@ -51,7 +51,7 @@
               <form
                 id="rtd-search-form"
                 class="wy-form"
-                action="#"
+                action="search.html"
                 method="get"
               >
                 <input type="text" name="q" placeholder="Search docs" />
@@ -67,7 +67,7 @@
             role="navigation"
             aria-label="main navigation"
           >
-            <ul>
+            <ul class="current">
               <li class="toctree-l1">
                 <a class="reference internal" href="getting-started.html"
                   >Getting Started</a
@@ -82,6 +82,9 @@
                 <a class="reference internal" href="changelog.html"
                   >Changelog</a
                 >
+              </li>
+              <li class="toctree-l1 current">
+                <a class="current reference internal" href="#">Contributing</a>
               </li>
             </ul>
           </div>
@@ -102,9 +105,13 @@
                   <a href="index.html" class="icon icon-home"></a> &raquo;
                 </li>
 
-                <li>Search</li>
+                <li>Contributing</li>
 
-                <li class="wy-breadcrumbs-aside"></li>
+                <li class="wy-breadcrumbs-aside">
+                  <a href="sources/contributing.rst.txt" rel="nofollow">
+                    View page source</a
+                  >
+                </li>
               </ul>
 
               <hr />
@@ -116,19 +123,52 @@
               itemtype="http://schema.org/Article"
             >
               <div itemprop="articleBody">
-                <noscript>
-                  <div id="fallback" class="admonition warning">
-                    <p class="last">
-                      Please activate JavaScript to enable the search
-                      functionality.
+                <div class="section" id="contributing">
+                  <h1>
+                    Contributing<a
+                      class="headerlink"
+                      href="#contributing"
+                      title="Permalink to this headline"
+                      >¶</a
+                    >
+                  </h1>
+                  <p>
+                    Thanks for thinking about contributing to Zenora. This
+                    library is still uncomplete so your help will be welcome. So
+                    let’s start on setting up the development environment.
+                  </p>
+                  <div class="admonition note">
+                    <p class="admonition-title">Note</p>
+                    <p>
+                      TIt is recommended that you install Git CLI for
+                      contributing to GitHub projects. Download it from
+                      [here]&lt;<a
+                        class="reference external"
+                        href="https://git-scm.com/downloads"
+                        >https://git-scm.com/downloads</a
+                      >&gt;_.
                     </p>
                   </div>
-                </noscript>
-
-                <div id="search-results"></div>
+                  <p>So before</p>
+                </div>
               </div>
             </div>
             <footer>
+              <div
+                class="rst-footer-buttons"
+                role="navigation"
+                aria-label="footer navigation"
+              >
+                <a
+                  href="changelog.html"
+                  class="btn btn-neutral float-left"
+                  title="Changelog"
+                  accesskey="p"
+                  rel="prev"
+                  ><span class="fa fa-arrow-circle-left"></span> Previous</a
+                >
+              </div>
+
               <hr />
 
               <div role="contentinfo">
@@ -151,13 +191,5 @@
         SphinxRtdTheme.Navigation.enable(true);
       });
     </script>
-
-    <script type="text/javascript">
-      jQuery(function () {
-        Search.loadIndex("searchindex.js");
-      });
-    </script>
-
-    <script type="text/javascript" id="searchindexloader"></script>
   </body>
 </html>

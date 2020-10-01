@@ -1,0 +1,13 @@
+============
+Contributing
+============
+
+Thanks for thinking about contributing to Zenora. This library is still uncomplete
+so your help will be welcome. So let's start on setting up the development environment.
+
+.. note::
+    TIt is recommended that you install Git CLI for contributing to GitHub projects.
+    Download it from [here]<https://git-scm.com/downloads>_.
+
+
+So before
